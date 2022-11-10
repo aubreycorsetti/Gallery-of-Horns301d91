@@ -44,10 +44,9 @@ class HornedBeast extends React.Component {
               <img
                 className='animalMainImg'
                 src={this.props.image_url}
-                title={this.props.title}
                 alt={this.props.description}
-                onClick={(this.handleClick)}
-              ></img>
+                onClick={this.props.handleOpenModal}
+              />
               <Card.Text>
                 {this.props.description}
               </Card.Text>
@@ -64,3 +63,6 @@ class HornedBeast extends React.Component {
 }
 
 export default HornedBeast;
+
+
+
