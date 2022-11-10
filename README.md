@@ -6,22 +6,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### TIME ESTIMATE Class 02
-
-• Number and name of feature: I'm honestly not sure what this means..
-• Estimate of time needed to complete: 5 hours
-• Start time: 1:00 pm
-• Finish time: 5:06pm
-• Actual time needed to complete:4 hours 6 minutes.
-
-### TIME ESTIMATE Class 03
-
-• Number and name of feature: I'm honestly not sure what this means..
-• Estimate of time needed to complete: 4.5 hours
-• Start time: 1:15 pm
-• Finish time: 4:57pm
-• Actual time needed to complete: 3 hours 42 minutes.
-
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -85,3 +69,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+### TIME ESTIMATE
+
+• Number and name of feature: I'm honestly not sure what this means..
+• Estimate of time needed to complete: 5 hours
+• Start time: 1:00 pm
+• Finish time: 5:06pm
+• Actual time needed to complete:4 hours 6 minutes.
