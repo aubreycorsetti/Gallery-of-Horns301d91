@@ -1,11 +1,12 @@
 import React from 'react';
 import Header from './Header.js';
 import Main from './Main.js';
-// import Modal from 'react-bootstrap/Modal';
 import './App.css';
 import Footer from './Footer.js';
 import data from './data.json';
 import SelectedBeast from './SelectedBeast.js';
+
+
 
 class App extends React.Component {
 
@@ -19,6 +20,7 @@ class App extends React.Component {
   }
 
   handleCloseModal = () => {
+    console.log('hi');
     this.setState({
       showModal: false,
     });
@@ -42,11 +44,13 @@ class App extends React.Component {
         selectedBeast={this.state.selectedBeast}
         />
       }
-        <Header/>
+        <Header
+        beasts={this.state.beasts}/>
 
         <Main
         beasts={this.state.beasts}
         handleOpenModal={this.handleOpenModal}
+        // newData={this.state.beasts}
         />
         <Footer />
 
