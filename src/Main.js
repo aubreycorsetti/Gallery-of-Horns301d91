@@ -8,85 +8,47 @@ import './Main.css';
 
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      numOfHorns: 0,
-      newData: this.props.beasts
-    }
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-      let update = this.props.data.filter(beast => {
-        return beast.horns === this.state.numOfHorns;
-      });
-      this.setState({
-        newData: update
-      });
-  }
-  handleChange = (event) => {
-    event.preventDefault();
-    this.setState({
-      numOfHorns: parseInt(event.target.value)
-    });
-  }
 
   render() {
 
-    let beastArray = this.state.newData.map(beasts => {
-
-      return (
-        <>
-          <div className="mainBeast">
-            {
-
-              <HornedBeast
-                handleOpenModal={() => this.props.handleOpenModal(beasts)}
-                key={beasts._id}
-                _id={beasts._id}
-                image_url={beasts.image_url}
-                title={beasts.title}
-                description={beasts.description}
-                keyword={beasts.keyword}
-                horns={beasts.horns}
-              />
-
-            }
-          </div>
-        </>
-      )
-
+    let beastArray = this.props.beasts.map(beasts => {
+      return <HornedBeast
+        handleOpenModal={() => this.props.handleOpenModal(beasts)}
+        _id={beasts._id}
+        title={beasts.title}
+        image_url={beasts.image_url}
+        horns={beasts.horns}
+        keyword={beasts.keyword}
+        description={beasts.description}
+        key={beasts._id}
+      />
     });
+
 
 
     return (
       <>
-      <main>
-        <Form id="form" onSubmit={this.handleSubmit}>
-          <fieldset>
-            <Form.Group className="beastHorn">
-              <Form.Label id="formLabel" htmlFor="Select">
-                Search by Number of horns
-                </Form.Label>
-                <Form.Select id="Select" onChange={this.handleChange}>
-                  <option value="all">All</option>
-                  <option value="even">Even</option>
-                  <option value="odd">Odd</option>
+        <main>
+          <Form id="form">
+            <fieldset>
+              <Form.Group className="beastHorn">
+                <Form.Label id="labelForm" htmlFor="Select">Search by Number of Horns</Form.Label>
+                <Form.Select id="Select" onChange={this.props.filter}>
+                  <option>All</option>
+                  <option value={1}>1 Horn</option>
+                  <option value={2}>2 Horns</option>
+                  <option value={3}>3 Horns</option>
+                  <option value={100}>100 Horns</option>
                 </Form.Select>
-                </Form.Group>
-                <Button id="button" type="submit">Submit</Button>
-                </fieldset>
-                </Form>
-                <article>
-                  {beastArray}
-                </article>
-                </main>
-                </>
+              </Form.Group>
+            </fieldset>
+          </Form>
+          <article>
+            {beastArray}
+          </article>
+        </main>
+      </>
     )
   }
-
-
 }
-
 export default Main;
