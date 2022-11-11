@@ -1,7 +1,6 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js';
 import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 import './Main.css';
 
 
@@ -50,5 +49,5 @@ class Main extends React.Component {
       </>
     )
   }
-}
+};
 export default Main;
