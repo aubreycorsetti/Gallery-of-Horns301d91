@@ -31,7 +31,30 @@ body {
 
 h1 {
   text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  font-size: 6rem;
   
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(158, 143, 178, 1);
+}
+
+#modaling {
+  width: 100%;
+  height: auto;
+  border-radius: 2em;
+  border-style: outset;
+}
+
+.modal {
+  width: auto;
+  max-width: vw;
+  height: 45%;
+  font-style: italic;
+  font-weight: 450;
 }
 
 

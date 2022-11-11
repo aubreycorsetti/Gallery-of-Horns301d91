@@ -25,3 +25,23 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.beastHorn {
+  width: 25%;
+  margin-left: 1rem;
+  margin-top: .3rem;
+  color: rgb(255, 255, 255);
+}
+
+#Select {
+  color: rgb(133, 67, 169);
+  min-width: 190px;
+  max-width: 300px;
+  font-weight: 500;
+}
+
+#labelForm {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.5rem;
+  font-weight:lighter;
+}
